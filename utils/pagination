@@ -1,0 +1,9 @@
+module.exports = (page, limit, total) => {
+  const totalPages = Math.ceil(total / limit);
+  return {
+    totalItems: total,
+    totalPages,
+    currentPage: page,
+    pageSize: limit,
+  };
+};
